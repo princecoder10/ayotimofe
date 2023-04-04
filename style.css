@@ -1,0 +1,497 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(purple, black);
+  background-repeat: no-repeat;
+  background-size: 100%, 100vh;
+  animation: bgChange 6s linear 1 forwards;
+}
+
+@keyframes bgChange {
+  0% {
+    background: linear-gradient(purple, black);
+    background-repeat: no-repeat;
+  }
+  10% {
+    background: linear-gradient(purple, black);
+    background-repeat: no-repeat;
+  }
+  20% {
+    background: linear-gradient(blue, red);
+    background-repeat: no-repeat;
+  }
+  30% {
+    background: linear-gradient(blue, red);
+    background-repeat: no-repeat;
+  }
+  40% {
+    background: linear-gradient(purple, red);
+    background-repeat: no-repeat;
+  }
+  50% {
+    background: linear-gradient(purple, red);
+    background-repeat: no-repeat;
+  }
+  60% {
+    background: linear-gradient(blue, black);
+    background-repeat: no-repeat;
+  }
+  70% {
+    background: linear-gradient(blue, black);
+    background-repeat: no-repeat;
+  }
+  90% {
+    background: linear-gradient(blue, red);
+    background-repeat: no-repeat;
+  }
+  100% {
+    background: linear-gradient(blue, red);
+    background-repeat: no-repeat;
+  }
+}
+
+.typing-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 100px;
+  margin-left: -20px;
+}
+
+.input-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 42px;
+  background-color: blue;
+  margin-left: 8px;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.input-cursor {
+  animation: blink 800ms linear infinite alternate;
+}
+
+#sentence {
+  word-spacing: 5px;
+}
+.sentence::after {
+  content: "\00a0"; /* Adds a non-breaking space after the sentence */
+}
+
+.intro {
+  display: grid;
+  place-items: center;
+  align-items: center;
+  padding-top: 10%;
+}
+
+.button1 {
+  display: grid;
+  place-items: center;
+  align-items: center;
+  transform: translateY(800%);
+}
+
+#startBtn {
+  color: white;
+  width: 70%;
+  height: 190%;
+  transform: translateY(14em);
+  background: -webkit-linear-gradient(left, blue, red);
+  outline: none;
+  border: none;
+  padding: 4px;
+}
+
+.intro {
+  height: 40vh;
+}
+
+.intro > h1 {
+  color: white;
+  font-size: 42px;
+  text-shadow: 5px 3px 10px black;
+}
+.content {
+  display: none;
+}
+
+.name {
+  display: grid;
+  place-items: center;
+  align-items: center;
+}
+
+.a,
+.y,
+.o,
+.t,
+.i,
+.m,
+.o,
+.o2,
+.f,
+.e,
+.love {
+  display: grid;
+  place-items: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(blue, purple);
+  position: absolute;
+  transform: translateY(20vh);
+  color: white;
+}
+
+.a {
+  transform-style: preserve-3d;
+  transform: translateX(-7em) translateY(20vh);
+  animation: a 5s linear 1 forwards;
+}
+
+.y {
+  transform-style: preserve-3d;
+  transform: translateX(-2.5em) translateY(20vh);
+  animation: y1 5s linear 1 forwards;
+}
+
+.o {
+  transform-style: preserve-3d;
+  transform: translateX(2.5em) translateY(20vh);
+  animation: o 5s linear 1 forwards;
+}
+
+.t {
+  transform-style: preserve-3d;
+  transform: translateX(7.5em) translateY(20vh);
+  animation: t 5s linear 1 forwards;
+}
+
+.i {
+  transform-style: preserve-3d;
+  transform: translateX(-6em) translateY(30vh);
+  animation: i 5s linear 1 forwards;
+}
+
+.m {
+  transform-style: preserve-3d;
+  transform: translateX(0.1em) translateY(30vh);
+  animation: m 5s linear 1 forwards;
+}
+
+.o2 {
+  transform-style: preserve-3d;
+  transform: translateX(5.5em) translateY(30vh);
+  animation: o2 5s linear 1 forwards;
+}
+
+.f {
+  transform-style: preserve-3d;
+  transform: translateX(-3em) translateY(40vh);
+  animation: f 5s linear 1 forwards;
+}
+
+.e {
+  transform-style: preserve-3d;
+  transform: translateX(2.5em) translateY(40vh);
+  animation: e 5s linear 1 forwards;
+}
+
+.love {
+  transform-style: preserve-3d;
+  transform: translateX(2.7em) translateY(50vh);
+  animation: love 5s linear 1 forwards;
+}
+
+@keyframes y1 {
+  0% {
+    transform: translateX(-2.5em) translateY(20vh);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-3em) translateY(20vh);
+    opacity: 0;
+  }
+}
+
+@keyframes i {
+  0% {
+    transform: translateX(-6em) translateY(30vh);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-7em) translateY(32vh);
+    opacity: 0;
+  }
+}
+
+@keyframes a {
+  0% {
+    transform: translateX(-7em) translateY(20vh);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-7.5em) translateY(23vh);
+    opacity: 0;
+  }
+}
+
+@keyframes o {
+  0% {
+    transform: translateX(2.5em) translateY(20vh);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(3.5em) translateY(20vh);
+    opacity: 0;
+  }
+}
+
+@keyframes m {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes t {
+  0% {
+    transform: translateX(7.5em) translateY(20vh);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(8em) translateY(23vh);
+    opacity: 0;
+  }
+}
+
+@keyframes o2 {
+  0% {
+    transform: translateX(5.5em) translateY(30vh);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(7.5em) translateY(32vh);
+    opacity: 0;
+  }
+}
+
+@keyframes f {
+  0% {
+    transform: translateX(-3em) translateY(40vh);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-3.5em) translateY(43vh);
+    opacity: 0;
+  }
+}
+
+@keyframes e {
+  0% {
+    transform: translateX(2.5em) translateY(40vh);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(3.5em) translateY(43vh);
+    opacity: 0;
+  }
+}
+
+@keyframes love {
+  0% {
+    transform: translateX(2.5em) translateY(40vh);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-0.00001em) translateY(50vh);
+    opacity: 0;
+  }
+}
+
+.container2 {
+  opacity: 0;
+  display: flex;
+  overflow-x: scroll;
+  padding: 24px;
+  width: 300px;
+  height: 360px;
+  scroll-snap-type: x mandatory;
+  scroll-padding: 24px;
+  border-radius: 8px;
+  gap: 12px;
+  margin: 2rem auto;
+  background: white;
+  color: white;
+  animation: wait 3s linear 5s 1 forwards;
+}
+
+.container2 .item {
+  flex: 0 0 100%;
+  padding: 24px;
+  border-radius: 8px;
+  scroll-snap-align: start;
+  background-color: lightblue;
+}
+
+div:nth-child(2) {
+  background: -webkit-linear-gradient(top, orange, pink, blue);
+}
+
+div:nth-child(3) {
+  background: -webkit-linear-gradient(right, pink, lightblue);
+}
+
+div:nth-child(4) {
+  background: linear-gradient(rgb(255, 146, 4), orange);
+}
+
+.button {
+  all: unset;
+  width: 5.5em;
+  height: 30px;
+  padding: 3px;
+  color: black;
+  background-color: white;
+  display: grid;
+  place-items: center;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: 3px 3px 5px white;
+  transition: all 1s;
+}
+
+.button:focus {
+  border: 2px solid black;
+}
+
+.button:hover {
+  box-shadow: none;
+}
+
+@keyframes wait {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.video-container {
+  width: 100%;
+  display: grid;
+  place-items: center;
+  align-items: center;
+  margin-top: 50px;
+  background: white;
+  transform: translateY(50%);
+  border-radius: 10px;
+  box-shadow: 7px 8px 15px black;
+}
+
+.bckBtn {
+  padding: 12px;
+  width: 80px;
+  color: white;
+  background-color: black;
+  border: none;
+}
+
+.bckBtn a {
+  color: white;
+}
+
+.container3 {
+  width: 300px;
+  border: 10px solid #ddd;
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: 5px 15px 25px rgba(245, 242, 242, 0.5);
+  box-sizing: border-box;
+  min-height: 100%;
+  margin: auto;
+}
+.wrapper img {
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+
+  animation: slide 10s infinite linear;
+}
+.wrapper {
+  width: 100%;
+  display: flex;
+  align-content: center;
+}
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(0);
+  }
+  30% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(-100%);
+  }
+  55% {
+    transform: translateX(-200%);
+  }
+  70% {
+    transform: translateX(-200%);
+  }
+  75% {
+    transform: translateX(-300%);
+  }
+  80% {
+    transform: translateX(-300%);
+  }
+  85% {
+    transform: translateX(-400%);
+  }
+  90% {
+    transform: translateX(-400%);
+  }
+  95% {
+    transform: translateX(-500%);
+  }
+  100% {
+    transform: translateX(-500%);
+  }
+}
+
+.poem-container {
+  margin-top: 100px;
+  display: gird;
+  place-items: center;
+  align-items: center;
+  margin-left: 50px;
+  line-height: 30px;
+}
